@@ -45,11 +45,11 @@ classDiagram
   +public Person getPerson()
   +public string getDatein()
   }
-  Home -- Log In
-  Home -- Person 
-  Person -- Student
-  Log In -- Admin
-  Admin -- Student
+   Home -- Log In
+   Home -- Person 
+   Person -- Student
+   Log In -- Admin
+   Admin -- Student
 
 ```
 ชื่อผู้พัฒนา
