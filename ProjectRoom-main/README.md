@@ -19,10 +19,8 @@ classDiagram
   +button_login_Click_1():void
   }
   class Admin{
-  -Admin Instance;
-  -List<Students> students 
-  -Username 
-  -Password 
+  -Username:string 
+  -Password :string
   +openToolStripMenuItem_Click_1():void
   +saveToolStripMenuItem_Click_1():void
   +backToolStripMenuItem_Click():void
@@ -30,9 +28,9 @@ classDiagram
   class Person{
   -name;
   -lastname;
-  -id;
-  -major;
-  -level;
+  -id:string
+  -major:string
+  -level:string
   +getName()
   +getLastName()
   +getID()
@@ -40,8 +38,8 @@ classDiagram
   +getLevel()
   }
   class Student{
-  -person;
-  -datein;
+  -person:Person
+  -datein:string
   +getPerson():void
   +getDatein():void
   }
