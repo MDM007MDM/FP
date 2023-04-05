@@ -12,37 +12,45 @@ classDiagram
   direction LR
   class Home{
   -onload():void 
+  +button_submit_Click_1():void
+  +adminToolStripMenuItem_Click_1():void
 }
   class LogIn{
   +button_login_Click_1():void
   }
   class Admin{
-  -Username:string 
-  -Password :string
+  -Admin Instance;
+  -List<Student> students 
+  -Username 
+  -Password 
+  +openToolStripMenuItem_Click_1()
+  +saveToolStripMenuItem_Click_1()
+  +backToolStripMenuItem_Click()
   }
   class Person{
-  -name;
-  -lastname;
-  -id:string
-  -major:string
-  -level:string
-  +getName()
-  +getLastName()
-  +getID()
-  +getMajor()
-  +getLevel()
+  -name:String;
+  -lastname:String;
+  -id:String;
+  -major:String;
+  -level:String;
+  +getName():String
+  +getLastName():String
+  +getID():String
+  +getMajor():String
+  +getLevel():String
   }
   class Student{
-  -person:Person
-  -datein:string
-  +getPerson():void
-  +getDatein():void
+  -person:Person;
+  -datein:Date;
+  +getPerson():Person
+  +getDatein():Date
   }
    Home -- LogIn
    Home -- Person 
    Person -- Student
-   Log In -- Admin
+   LogIn -- Admin
    Admin -- Student
+
 
 ```
 ชื่อผู้พัฒนา
