@@ -10,7 +10,7 @@ Class Diagram
 ```mermaid
 classDiagram
   class Home{
-    -register()
+    -savedata()
 }
   class Login{
     -login()

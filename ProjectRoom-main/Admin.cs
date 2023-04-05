@@ -27,7 +27,30 @@ namespace ProjectRoom
             return this.dataGridView1;
         }
 
+         private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
+                {
+                    SaveFileDialog saveFile = new SaveFileDialog();
+                    saveFile.FileName = "Students";
+                    saveFile.Filter = "CSV|*.csv";
+                    saveFile.ShowDialog();
 
+                    if (saveFile.FileName != "")
+                    {
+                        using (StreamWriter file = new StreamWriter(saveFile.FileName))
+                        {
+                            foreach (Students i in students)
+                            {
+                                file.WriteLine($"" +
+                                    $"{i.getPerson().getName()}," +
+                                    $"{i.getPerson().getLastName()}," +
+                                    $"{i.getPerson().getID()}," +
+                                    $"{i.getPerson().getMajor()}," +
+                                    $"{i.getPerson().getLevel()}," +
+                                    $"{i.getDatein()},");
+                            }
+                        }
+                    }
+                }
         private void openToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog openfile = new OpenFileDialog();
@@ -54,32 +77,6 @@ namespace ProjectRoom
                 }
             }
         }
-
-        private void saveToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = "Students";
-            saveFile.Filter = "CSV|*.csv";
-            saveFile.ShowDialog();
-
-            if (saveFile.FileName != "")
-            {
-                using (StreamWriter file = new StreamWriter(saveFile.FileName))
-                {
-                    foreach (Students i in students)
-                    {
-                        file.WriteLine($"" +
-                            $"{i.getPerson().getName()}," +
-                            $"{i.getPerson().getLastName()}," +
-                            $"{i.getPerson().getID()}," +
-                            $"{i.getPerson().getMajor()}," +
-                            $"{i.getPerson().getLevel()}," +
-                            $"{i.getDatein()},");
-                    }
-                }
-            }
-        }
-
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Home form1 = new Home();
