@@ -44,11 +44,11 @@ ClassDiagram
   +public Person getPerson()
   +public string getDatein()
 }
-    Home -- LogIn
-    Home -- Person
-    Person -- Student
-    LogIn -- Admin
-    Admin -- Student
+    Home --> LogIn
+    Home --> Person
+    Person --> Student
+    LogIn --> Admin
+    Admin --> Student
 
 
 ```
