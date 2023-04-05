@@ -15,7 +15,7 @@ classDiagram
   +private void button_submit_Click_1
   +private void adminToolStripMenuItem_Click_1
 }
-  class Log In{
+  class LogIn{
   +private void button_login_Click_1
   }
   class Admin{
@@ -45,7 +45,7 @@ classDiagram
   +public Person getPerson()
   +public string getDatein()
   }
-   Home -- Log In
+   Home -- LogIn
    Home -- Person 
    Person -- Student
    Log In -- Admin
