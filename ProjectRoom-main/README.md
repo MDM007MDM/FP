@@ -32,7 +32,7 @@ classDiagram
   +Bill(pay double,getmoney Double):void
   +payBill():double
    }
-  class student{
+  class Student{
   -totalPice:double
   +Bill(pay double,getmoney Double):void
   +payBill():double
