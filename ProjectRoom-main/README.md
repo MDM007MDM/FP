@@ -7,49 +7,38 @@
     อยากรู้ว่าใครใช้บ้างโดยให้บอก ชื่อ นามสกุล สาขา และชั้นปี
 ```
 Class Diagram
-ClassDiagram
+```mermaid
+classDiagram
   direction LR
-  Class Home {
-  +private void onload()
-  +private void button_submit_Click_1()
-  +private void adminToolStripMenuItem_Click_1()
+  class Home{
+  -cheakin():void
+  -cheaout():void
+  -Save():void
+  -Clear():void
 }
-  Class LogIn {
-  +private void button_login_Click_1()
-}
-  Class Admin {
-  -public static Admin Instance
-  -public List<Student> students = new List<Student>()
-  -public string Username = "Admin"
-  -public string Password = "1234"
-  +private void openToolStripMenuItem_Click_1()
-  +private void saveToolStripMenuItem_Click_1()
-  +private void backToolStripMenuItem_Click()
-}
-  Class Person {
-  -private string name
-  -private string lastname
-  -private string id
-  -private string major
-  -private string level
-  +public string getName()
-  +public string getLastName()
-  +public string getID()
-  +public string getMajor()
-  +public string getLevel()
-}
-  Class Student {
-  -private Person person
-  -private string datein
-  +public Person getPerson()
-  +public string getDatein()
-}
-    Home --> LogIn
-    Home --> Person
-    Person --> Student
-    LogIn --> Admin
-    Admin --> Student
-
+  class Login{
+  -discountcode():void
+  -pay():void
+  -back():void
+  }
+  class Admin{
+  -couponCode:string
+  -minimumPice:double
+  +creat(double min):void
+  +getCoupon():void
+  }
+  class Person{
+  -totalPice:double
+  +Bill(pay double,getmoney Double):void
+  +payBill():double
+   }
+  class student{
+  -totalPice:double
+  +Bill(pay double,getmoney Double):void
+  +payBill():double
+   }
+  Home -- Login
+  Home -- Person
 
 ```
 ชื่อผู้พัฒนา
