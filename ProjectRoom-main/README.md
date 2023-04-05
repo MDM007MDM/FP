@@ -39,6 +39,9 @@ classDiagram
    }
   Home -- Login
   Home -- Person
+  Login -- Admin
+  Admin -- Student
+  Student -- Person
 
 ```
 ชื่อผู้พัฒนา
