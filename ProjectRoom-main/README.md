@@ -10,15 +10,15 @@ Class Diagram
 ```Mermaid
 ClassDiagram
   direction LR
-  Class Home {
+  Class Home{
   +private void onload 
   +private void button_submit_Click_1
   +private void adminToolStripMenuItem_Click_1
 }
-  Class Log In {
+  Class Log In{
   +private void button_login_Click_1
-}
-  Class Admin {
+  }
+  Class Admin{
   -public static Admin Instance;
   -public List<Students> students = new List<Students>();
   -public string Username = "Admin";
@@ -26,8 +26,8 @@ ClassDiagram
   +private void openToolStripMenuItem_Click_1
   +private void saveToolStripMenuItem_Click_1
   +private void backToolStripMenuItem_Click
-}
-  Class Person {
+  }
+  Class Person{
   -private string name;
   -private string lastname;
   -private string id;
@@ -38,15 +38,16 @@ ClassDiagram
   +public string getID(){ return id; }
   +public string getMajor(){ return major; }
   +public string getLevel(){ return level; }
-}
-  Class Student {
+  }
+  Class Student{
   -private Person person;
   -private string datein;
   +public Person getPerson() { return person; }
   +public string getDatein() { return datein; }
-}
+  }
   Home -- Log In
-  Home -- Person -- Student
+  Home -- Person 
+  Person -- Student
   Log In -- Admin
   Admin -- Student
 
