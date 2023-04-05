@@ -9,39 +9,42 @@
 Class Diagram
 ```mermaid
 classDiagram
-  direction LR
   class Home{
-  -cheakin():void
-  -cheaout():void
-  -Save():void
-  -Clear():void
+    -register()
 }
   class Login{
-  -discountcode():void
-  -pay():void
-  -back():void
+    -login()
   }
   class Admin{
-  -couponCode:string
-  -minimumPice:double
-  +creat(double min):void
-  +getCoupon():void
+    +String username
+    +String password
+    -openfile()
+    -savefile()
   }
   class Person{
-  -totalPice:double
-  +Bill(pay double,getmoney Double):void
-  +payBill():double
+    +string name
+    +string lastname
+    +string id
+    +string major
+    +string level
+    -getName()
+    -getLastName()
+    -getID()
+    -getMajor()
+    -getLevel()
    }
   class Student{
-  -totalPice:double
-  +Bill(pay double,getmoney Double):void
-  +payBill():double
+    +Person person
+    +string datein
+    -getPerson()
+    -getDatein()
    }
-  Home -- Login
-  Home -- Person
-  Login -- Admin
-  Admin -- Student
-  Student -- Person
+
+   Home <|-- Login
+   Login <|-- Admin
+   Admin <|-- Student
+   Student <|-- Person
+  
 
 ```
 ชื่อผู้พัฒนา
