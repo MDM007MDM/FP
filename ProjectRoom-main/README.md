@@ -12,8 +12,6 @@ classDiagram
   direction LR
   class Home{
   -onload():void 
-  -button_submit_Click_1():void
-  -adminToolStripMenuItem_Click_1():void
 }
   class LogIn{
   +button_login_Click_1():void
@@ -21,9 +19,6 @@ classDiagram
   class Admin{
   -Username:string 
   -Password :string
-  -openToolStripMenuItem_Click_1():void
-  -saveToolStripMenuItem_Click_1():void
-  -backToolStripMenuItem_Click():void
   }
   class Person{
   -name;
