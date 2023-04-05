@@ -11,21 +11,21 @@ Class Diagram
 classDiagram
   direction LR
   class Home{
-  +private void onload 
-  +private void button_submit_Click_1
-  +private void adminToolStripMenuItem_Click_1
+  -onload():void 
+  +button_submit_Click_1():void
+  +adminToolStripMenuItem_Click_1():void
 }
   class LogIn{
-  +private void button_login_Click_1
+  +button_login_Click_1():void
   }
   class Admin{
   -Admin Instance;
   -List<Students> students 
   -Username 
   -Password 
-  +openToolStripMenuItem_Click_1
-  +saveToolStripMenuItem_Click_1
-  +backToolStripMenuItem_Click
+  +openToolStripMenuItem_Click_1():void
+  +saveToolStripMenuItem_Click_1():void
+  +backToolStripMenuItem_Click():void
   }
   class Person{
   -name;
@@ -42,8 +42,8 @@ classDiagram
   class Student{
   -person;
   -datein;
-  +getPerson()
-  +getDatein()
+  +getPerson():void
+  +getDatein():void
   }
    Home -- LogIn
    Home -- Person 
